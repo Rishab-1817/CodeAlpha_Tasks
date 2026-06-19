@@ -1,0 +1,17 @@
+# Main Web Framework
+streamlit>=1.18.0
+
+# API & Network
+requests>=2.28.0
+
+# Text-to-Speech
+gTTS>=2.2.0
+
+# Optional: For Google Cloud Translate (uncomment to enable)
+# google-cloud-translate>=3.9.0
+
+# Optional: For Microsoft Translator (uncomment to enable)
+# azure-cognitiveservices-language-translator>=0.2.0
+
+# Optional: For additional features
+# python-dotenv>=0.21.0
