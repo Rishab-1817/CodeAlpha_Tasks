@@ -143,6 +143,19 @@ function App() {
       if (!options.switchTo) {
         setActiveView('home');
       }
+
+      // ✅ AUTO-SCROLL TO ANSWER ON MOBILE
+      if (window.innerWidth <= 768) {
+        setTimeout(() => {
+          const answerElement = document.querySelector('.response-card-wrapper');
+          if (answerElement) {
+            answerElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }, 300);
+      }
     } catch (err) {
       setError(err.message || 'Search failed.');
     } finally {
@@ -249,7 +262,9 @@ function App() {
       </div>
 
       {response ? (
-        <ResponseCard response={response} onToggleFavorite={toggleFavorite} isFavorite={Boolean(selectedFavorite)} />
+        <div className="response-card-wrapper">
+          <ResponseCard response={response} onToggleFavorite={toggleFavorite} isFavorite={Boolean(selectedFavorite)} />
+        </div>
       ) : (
         <div className="rounded-[32px] border border-dashed border-white/10 bg-white/5 p-10 text-center text-slate-400">
           <p className="text-lg font-medium text-slate-200">Ask a placement or career question to unlock an answer.</p>
