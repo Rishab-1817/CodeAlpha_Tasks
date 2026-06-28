@@ -1,86 +1,57 @@
-# CAREERWISE – AI-Powered Placement & Career Oracle
+# 🎓 CAREERWISE
 
-A polished full-stack AI FAQ chatbot built with React, Tailwind CSS, Framer Motion, FastAPI, and Sentence Transformers. It performs semantic search over 100+ curated placement and career questions, returning grounded answers from the dataset.
+> **Your AI-Powered Placement & Career Oracle.**
+> **Prepare Smarter. Get Placed Faster.**
 
-## Features
+An AI-powered career assistant that helps students with **placements, DSA, interviews, resumes, internships, aptitude, and career guidance** using semantic search and Natural Language Processing (NLP).
 
-- Premium futuristic dashboard UI
-- Semantic search with `all-MiniLM-L6-v2`
-- NLTK preprocessing: tokenization, lowercasing, stopword removal, lemmatization
-- Cosine similarity matching with Scikit-learn
-- Confidence scoring
-- Quick topics, popular questions, search history, copy answer
-- Fully frontend/backend separated for Vercel + Render deployment
+## ✨ Features
 
-## Folder Structure
+* 🤖 AI-Powered Career Assistant
+* 🧠 Semantic FAQ Search
+* 📚 100+ Curated Career FAQs
+* ⚡ Sentence Transformer Embeddings
+* 🎯 Cosine Similarity Matching
+* 📊 Confidence Score
+* ⚡ Quick Topics
+* 🔥 Popular Questions
+* 🎨 Modern Futuristic UI
+* 📱 Fully Responsive
 
-- `frontend/` – React application with Tailwind CSS and Framer Motion
-- `backend/` – FastAPI server, semantic search logic, FAQ dataset
-- `.gitignore` – shared ignore rules for Python and Node
+## 🚀 Live Demo
+https://careerwise-oracle.vercel.app
 
-## Setup
+## 🛠️ Tech Stack
 
-### Backend
+* React
+* Tailwind CSS
+* Framer Motion
+* FastAPI
+* Python
+* NLTK
+* Sentence Transformers
+* Scikit-Learn
+* NumPy
 
-1. Create a virtual environment:
-   ```bash
-   python -m venv .venv
-   ./.venv/Scripts/Activate.ps1
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r backend/requirements.txt
-   ```
-3. Start the backend:
-   ```bash
-   uvicorn backend.main:app --reload --port 8000
-   ```
+## 📦 Installation
 
-### Frontend
+```bash
+git clone https://github.com/yourusername/CAREERWISE.git
+cd CAREERWISE
 
-1. Install Node dependencies:
-   ```bash
-   cd frontend
-   npm install
-   ```
-2. Start the development server:
-   ```bash
-   npm run dev
-   ```
+# Backend
+pip install -r requirements.txt
+uvicorn main:app --reload
 
-### Environment
-
-- Frontend expects the backend at `http://localhost:8000` by default.
-- To override, create `.env` in `frontend/` with:
-  ```env
-  VITE_API_BASE_URL=http://localhost:8000
-  ```
-
-## Deployment
-
-- Deploy `frontend/` to Vercel as a React app.
-- Deploy `backend/` to Render as a Python FastAPI service.
-- Ensure CORS is enabled on the backend (already configured).
-
-## API
-
-- `GET /` – health check
-- `POST /search` – semantic FAQ search
-
-Request body:
-
-```json
-{ "query": "How do I start DSA?" }
+# Frontend
+npm install
+npm run dev
 ```
 
-Response body:
+## 📸 Screenshots
 
-```json
-{
-  "question": "How should I start DSA?",
-  "answer": "Start with fundamentals...",
-  "category": "DSA preparation",
-  "confidence": 98.2,
-  "similar_questions": ["How should I start DSA?", "Best roadmap for coding interviews?", "How do I study algorithms?"]
-}
-```
+
+## 👨‍💻 Author
+
+**Rishu Jha**
+http://www.linkedin.com/in/rishu-jha-18840b318
