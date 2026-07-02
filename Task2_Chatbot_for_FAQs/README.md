@@ -49,6 +49,7 @@ npm run dev
 ```
 
 ## 📸 Screenshots
+<img width="1443" height="847" alt="image" src="https://github.com/user-attachments/assets/e0c094e0-c3f4-4ba5-a675-fc0036a3265e" />
 
 
 ## 👨‍💻 Author
